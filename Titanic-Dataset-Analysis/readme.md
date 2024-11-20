@@ -27,6 +27,7 @@ The Titanic dataset contains information about passengers on the Titanic, includ
      - **Correlation Heatmap of Features**:
        ![Correlation Heatmap](images/heatmap.png)
      - **Time or Count Trend Analysis**:
+
        ![Line Graph](images/line_graph.png)
 
 4. **Key Insights**:
