@@ -19,15 +19,15 @@ The Titanic dataset contains information about passengers on the Titanic, includ
 3. **Data Visualization**:
    - Created visualizations to illustrate the relationships between survival and various attributes. The visualizations include:
      - **Survival by Gender**:
-       ![Survival by Gender](survival_by_sex.png)
+       ![Survival by Gender](images/survival_by_sex.png)
      - **Survival by Passenger Class**:
-       ![Survival by Passenger Class](survival_by_pclass.png)
+       ![Survival by Passenger Class](images/survival_by_pclass.png)
      - **Age Distribution by Survival Status**:
-       ![Age Distribution by Survival Status](age_distributin_by_survival.png)
+       ![Age Distribution by Survival Status](images/age_distributin_by_survival.png)
      - **Correlation Heatmap of Features**:
-       ![Correlation Heatmap](heatmap.png)
+       ![Correlation Heatmap](images/heatmap.png)
      - **Time or Count Trend Analysis**:
-       ![Line Graph](line_graph.png)
+       ![Line Graph](images/line_graph.png)
 
 4. **Key Insights**:
    - Survival rates were significantly higher for women compared to men.
