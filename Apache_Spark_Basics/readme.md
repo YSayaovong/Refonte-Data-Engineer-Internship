@@ -8,7 +8,6 @@ This project demonstrates the basics of using Apache Spark to process video logs
 
 ### **1. Input Data Processing**
 - Parses raw video log data into structured tuples `(user, video, action)`.
-- Example input data:
   ```plaintext
   "user1,video1,play"
   "user2,video2,pause"
@@ -17,31 +16,32 @@ This project demonstrates the basics of using Apache Spark to process video logs
   "user2,video2,play"
 
 ### 2. Filtering and Transformation
-Filters logs to include only the play action.
-Maps and reduces data to calculate aggregated statistics.
+- Filters logs to include only the play action.
+- Maps and reduces data to calculate aggregated statistics.
 
 ### 3. Result Presentation
-Outputs the number of times each video was played in a clear and concise format.
+- Outputs the number of times each video was played in a clear and concise format.
 Video Play Counts:
+```plaintext
 video1: 1 times
 video2: 1 times
 video3: 1 times
 
 ## Accomplishments
 ### Data Parsing
-Parsed raw data into structured tuples (user, video, action) for easier access and processing.
+- Parsed raw data into structured tuples (user, video, action) for easier access and processing.
 
 ### Dynamic Filtering
-Filtered logs to include only entries with the play action.
+- Filtered logs to include only entries with the play action.
 
 ### Aggregation
-Used the reduceByKey transformation to count the occurrences of each video being played.
+- Used the reduceByKey transformation to count the occurrences of each video being played.
 
 ### Scalable Processing
-Leveraged Spark's RDDs to demonstrate scalable parallel data processing.
+- Leveraged Spark's RDDs to demonstrate scalable parallel data processing.
 
 ### Result Clarity
-Programmatically calculated and displayed results clearly and concisely.
+- Programmatically calculated and displayed results clearly and concisely.
 
 ### Summary of Accomplishments
 - Data Parsing: Parsed raw data into structured tuples for efficient processing.
