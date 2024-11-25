@@ -8,8 +8,7 @@ This project demonstrates the basics of using Apache Spark to process video logs
 
 ### **1. Input Data Processing**
 - Parses raw video log data into structured tuples `(user, video, action)`.
-  ```plaintext
-  "user1,video1,play"
+   "user1,video1,play"
   "user2,video2,pause"
   "user1,video1,stop"
   "user3,video3,play"
@@ -22,7 +21,6 @@ This project demonstrates the basics of using Apache Spark to process video logs
 ### 3. Result Presentation
 - Outputs the number of times each video was played in a clear and concise format.
 Video Play Counts:
-```plaintext
 video1: 1 times
 video2: 1 times
 video3: 1 times
