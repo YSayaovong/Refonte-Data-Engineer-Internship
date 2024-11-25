@@ -34,8 +34,8 @@ This project demonstrates the basics of using Apache Spark to process video logs
 - Programmatically calculated and displayed results clearly and concisely.
 
 ### Summary of Accomplishments
-- Data Parsing: Parsed raw data into structured tuples for efficient processing.
-- Dynamic Filtering: Focused on specific actions (e.g., play) using filters.
-- Aggregation: Used reduceByKey to calculate total play counts for each video.
-- Scalable Processing: Demonstrated distributed data processing with Spark RDDs.
-- Clear Output: Displayed results in an easy-to-understand format.
+- **Data Parsing:** Parsed raw data into structured tuples for efficient processing.
+- **Dynamic Filtering:** Focused on specific actions (e.g., play) using filters.
+- **Aggregation:** Used reduceByKey to calculate total play counts for each video.
+- **Scalable Processing:** Demonstrated distributed data processing with Spark RDDs.
+- **Clear Output:** Displayed results in an easy-to-understand format.
