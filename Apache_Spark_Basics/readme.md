@@ -8,26 +8,17 @@ This project demonstrates the basics of using Apache Spark to process video logs
 
 ### **1. Input Data Processing**
 - Parses raw video log data into structured tuples `(user, video, action)`.
- ```plaintext
-  "user1,video1,play"
-  "user2,video2,pause"
-  "user1,video1,stop"
-  "user3,video3,play"
-  "user2,video2,play"
- plaintext```
-### 2. Filtering and Transformation
+ 
+### **2. Filtering and Transformation**
 - Filters logs to include only the play action.
 - Maps and reduces data to calculate aggregated statistics.
 
-### 3. Result Presentation
+### **3. Result Presentation**
 - Outputs the number of times each video was played in a clear and concise format.
-Video Play Counts:
-video1: 1 times
-video2: 1 times
-video3: 1 times
 
 ## Accomplishments
-### Data Parsing
+
+### **Data Parsing**
 - Parsed raw data into structured tuples (user, video, action) for easier access and processing.
 
 ### Dynamic Filtering
