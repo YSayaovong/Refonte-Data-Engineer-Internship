@@ -8,7 +8,8 @@ This project demonstrates the basics of using Apache Spark to process video logs
 
 ### **1. Input Data Processing**
 - Parses raw video log data into structured tuples `(user, video, action)`.
-   "user1,video1,play"
+ ```plaintext
+  "user1,video1,play"
   "user2,video2,pause"
   "user1,video1,stop"
   "user3,video3,play"
