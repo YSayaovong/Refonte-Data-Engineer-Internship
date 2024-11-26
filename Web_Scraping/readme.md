@@ -27,11 +27,8 @@ This Jupyter Notebook demonstrates the process of web scraping using Python. The
 ## Notebook Overview
 
 ### Code Highlights
-- **Cell 1**:
   - Imported necessary libraries like `requests` and `BeautifulSoup`.
-- **Cell 2**:
   - Defined the URL of the website to scrape.
-- **Cell 3**:
   - Sent an HTTP GET request to fetch webpage content.
 
 ### Additional Cells
