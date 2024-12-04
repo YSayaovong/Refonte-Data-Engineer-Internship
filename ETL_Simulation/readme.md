@@ -1,58 +1,49 @@
-import pandas as pd
-import requests
-from io import StringIO
+# ETL Simulation Project
 
-# Step 1: Extract
-def extract():
-    """
-    Extracts the Titanic dataset from a remote URL and loads it into a DataFrame.
-    """
-    url = 'https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv'
-    response = requests.get(url)
-    if response.status_code == 200:
-        data = StringIO(response.text)
-        df = pd.read_csv(data)
-        print("Dataset extracted successfully.")
-        return df
-    else:
-        raise Exception(f"Failed to fetch data. HTTP Status Code: {response.status_code}")
+This project demonstrates the process of building an ETL (Extract, Transform, Load) pipeline using Python. The pipeline works with the Titanic dataset to showcase the steps involved in extracting data, transforming it, and loading it for further use.
 
-# Step 2: Transform
-def transform(df):
-    """
-    Cleans and transforms the extracted DataFrame to prepare it for analysis.
-    """
-    # Drop irrelevant columns
-    df = df.drop(columns=["Cabin", "Ticket"])
+---
 
-    # Handle missing values
-    df["Age"].fillna(df["Age"].median(), inplace=True)
-    df["Embarked"].fillna("Unknown", inplace=True)
+## Key Features
 
-    # Add a new column: FamilySize
-    df["FamilySize"] = df["SibSp"] + df["Parch"] + 1
+### Data Extraction
+- Fetches the Titanic dataset from an external URL.
+- Converts the raw data into a pandas DataFrame for further processing.
 
-    print("Dataset transformed successfully.")
-    return df
+### Data Transformation
+- Cleans the dataset by removing irrelevant columns.
+- Handles missing values by imputing them with appropriate substitutes.
+- Enriches the dataset by adding a derived feature for family size.
 
-# Step 3: Load
-def load(df, file_name="transformed_titanic.csv"):
-    """
-    Saves the transformed DataFrame to a CSV file.
-    """
-    df.to_csv(file_name, index=False)
-    print(f"Dataset loaded successfully into {file_name}")
+### Data Loading
+- Saves the transformed dataset into a structured CSV file for storage or further analysis.
 
-# Complete ETL Pipeline Execution
-try:
-    # Extract the data
-    titanic_df = extract()
+---
 
-    # Transform the data
-    transformed_df = transform(titanic_df)
+## Accomplishments
 
-    # Load the data
-    load(transformed_df)
+### Data Extraction
+- **Accomplishment**: Retrieved raw data programmatically from an external URL.
+- **Details**: Used HTTP requests to fetch data and convert it into a structured format.
 
-except Exception as e:
-    print(f"An error occurred during the ETL process: {e}")
+### Data Cleaning
+- **Accomplishment**: Removed unnecessary columns (`Cabin`, `Ticket`) to simplify the dataset.
+- **Details**: Handled missing values in critical columns such as `Age` and `Embarked`.
+
+### Feature Engineering
+- **Accomplishment**: Created a new feature (`FamilySize`) combining `SibSp` and `Parch`.
+- **Details**: Represented the total number of family members traveling together.
+
+### Data Storage
+- **Accomplishment**: Successfully stored the transformed data in a CSV file.
+- **Details**: Saved clean and enriched data into a reusable and structured format.
+
+---
+
+## Summary of Accomplishments
+- **Dynamic Data Retrieval**: Programmatically fetched and processed real-world datasets.
+- **Data Cleaning**: Simplified and cleaned data for easier analysis.
+- **Feature Engineering**: Enhanced the dataset with meaningful derived features.
+- **Structured Storage**: Saved clean and enriched data in a structured format for future use.
+
+This project serves as an example of implementing the complete ETL process in a scalable and reusable manner.
