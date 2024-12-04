@@ -1,5 +1,3 @@
-# ETL Simulation Project: Complete Code
-
 import pandas as pd
 import requests
 from io import StringIO
@@ -9,13 +7,8 @@ def extract():
     """
     Extracts the Titanic dataset from a remote URL and loads it into a DataFrame.
     """
-    # URL of the Titanic dataset
     url = 'https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv'
-
-    # Use requests to get the raw data
     response = requests.get(url)
-
-    # Convert the data to a pandas-readable format
     if response.status_code == 200:
         data = StringIO(response.text)
         df = pd.read_csv(data)
@@ -29,14 +22,14 @@ def transform(df):
     """
     Cleans and transforms the extracted DataFrame to prepare it for analysis.
     """
-    # Drop columns that are irrelevant
+    # Drop irrelevant columns
     df = df.drop(columns=["Cabin", "Ticket"])
 
     # Handle missing values
     df["Age"].fillna(df["Age"].median(), inplace=True)
     df["Embarked"].fillna("Unknown", inplace=True)
 
-    # Create a derived column for family size
+    # Add a new column: FamilySize
     df["FamilySize"] = df["SibSp"] + df["Parch"] + 1
 
     print("Dataset transformed successfully.")
